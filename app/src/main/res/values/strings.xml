@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Nöbetçi Eczane</string>
+    <string name="ara">Ara</string>
+    <string name="baglanti_hatasi">Bağlantı hatası</string>
+    <string name="ilce_secilmedi">İlçe seçilmedi</string>
+    <string name="ornek_eczane_ad">Yeni Nilgün Eczanesi</string>
+    <string name="ornek_eczane_adres">Adres: Harmantepe Mahallesi Talatpaşa Caddesi, 270B</string>
+    <string name="ornek_eczane_tel">Telefon: 2122830080</string>
+    <string name="adresi_kopyala">Adresi Kopyala</string>
+    <string name="haritada_goster">Haritada Göster</string>
+    <string name="adres_prefix">Adres:</string>
+    <string name="telefon_prefix">Telefon:</string>
+    <string name="label_adres">adres</string>
+    <string name="adres_kopyalandi">Adres kopyalandı</string>
+    <string name="nobetci_eczaneler">Nöbetçi Eczaneler</string>
+    <string name="ilce">İlçe</string>
+</resources>
