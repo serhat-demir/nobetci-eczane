@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable name="ilce"
+            type="com.serhat.nobetcieczanemvvm.data.model.Ilce" />
+    </data>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:gravity="start"
+        android:text="@{ilce.ilce_ad}"
+        android:id="@+id/txtIlceAd"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp" />
+</layout>

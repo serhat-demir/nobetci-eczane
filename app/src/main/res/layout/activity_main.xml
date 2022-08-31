@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="mainActivity"
+            type="com.serhat.nobetcieczanemvvm.MainActivity" />
+
+        <variable name="tarih"
+            type="String" />
+
+        <variable name="ilceAdapter"
+            type="android.widget.ArrayAdapter" />
+
+        <variable name="eczaneAdapter"
+            type="com.serhat.nobetcieczanemvvm.ui.adapter.EczaneAdapter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:title="@string/app_name"
+            app:subtitle="@{tarih}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtIlce"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_ilce"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="16dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <Spinner
+            android:id="@+id/spIlce"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="6dp"
+            android:adapter="@{ilceAdapter}"
+            android:paddingHorizontal="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtIlce" />
+
+        <Button
+            android:id="@+id/btnAra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/btn_ara"
+            android:onClick="@{() -> mainActivity.eczaneAra()}"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@color/primary"
+            android:textSize="18sp"
+            app:strokeColor="@color/primary"
+            app:strokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spIlce" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvEczaneler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="0dp"
+            android:adapter="@{eczaneAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAra" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
