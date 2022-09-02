@@ -53,7 +53,14 @@ public class EczaneAdapter extends RecyclerView.Adapter<EczaneAdapter.EczaneView
     }
 
     public void ara(String telefon) {
-        Toast.makeText(mContext, mContext.getResources().getString(R.string.msg_arama_aktif_degil), Toast.LENGTH_SHORT).show();
+        if (telefon.trim().isEmpty()) {
+            Toast.makeText(mContext, mContext.getResources().getString(R.string.msg_telefon_bulunamadi), Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        String tel = (telefon.startsWith("0")) ? telefon : ("0" + telefon);
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + tel));
+        mContext.startActivity(intent);
     }
 
     public void adresiKopyala(String adres) {

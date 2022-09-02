@@ -10,4 +10,5 @@
     <string name="txt_eczane_haritada_goster">Haritada Göster</string>
     <string name="msg_adres_kopyalandi">Adres kopyalandı</string>
     <string name="msg_arama_aktif_degil">Arama özelliği aktif değil.</string>
+    <string name="msg_telefon_bulunamadi">Telefon numarası bulunamadı.</string>
 </resources>
