@@ -5,7 +5,7 @@
     <string name="txt_eczane_ad">Eczane Ad</string>
     <string name="txt_eczane_adres">Eczane Adres</string>
     <string name="txt_eczane_tel">Eczane Tel</string>
-    <string name="txt_eczane_ara">Ara</string>
+    <string name="txt_eczane_telefon_et">Telefon Et</string>
     <string name="txt_eczane_adres_kopyala">Adresi Kopyala</string>
     <string name="txt_eczane_haritada_goster">Haritada Göster</string>
     <string name="msg_adres_kopyalandi">Adres kopyalandı</string>

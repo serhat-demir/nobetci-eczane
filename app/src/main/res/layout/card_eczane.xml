@@ -84,7 +84,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="50"
                         android:gravity="center"
-                        android:text="@string/txt_eczane_ara"
+                        android:text="@string/txt_eczane_telefon_et"
                         android:onClick="@{() -> eczaneAdapter.ara(eczane.phone)}"
                         android:textColor="@color/primary"
                         android:textSize="16sp"
